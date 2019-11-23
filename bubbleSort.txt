@@ -1,0 +1,43 @@
+write a function that takes in an array of integers and returns a sorted version of that array, 
+using the bubble sort algorithm to sort the array
+
+function bubbleSort(array){
+  let didSwap = true
+  while(didSwap){
+    didSwap = bubbleSortHelper(array)
+  }
+  return array
+}
+
+function bubbleSortHelper(array){
+  let didSwap = false
+    for(let i = 0; i < array.length - 1; i++){
+      let curr = array[i]
+      let next = array[i + 1]
+      if(curr > next) {
+        didSwap = true
+        swap(i, i + 1, array)
+      }
+    }
+  return didSwap
+}
+
+
+function swap(i,j,array){
+  let temp = array[i]
+  array[i] = array[j]
+  array[j] = temp
+}
+
+
+[8,2,3]
+[2,3,8(d)]
+
+function main(arr){
+
+let didSwap = true
+while(didSwap){
+  didSwap =  bubbleSortHelper(array)
+}
+return array
+}
